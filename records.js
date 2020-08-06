@@ -72,7 +72,7 @@ function clearAllRecords() {
 function edit(n) {
     var x = n.parentNode.parentNode.rowIndex;
 
-    var item = "Index.html?id=";
+    var item = "index.html?id=";
     item += x;
     location.replace(item);
 }

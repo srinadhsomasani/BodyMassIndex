@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+    <script src="records.js"></script>
+
+</head>
+
+<body id="body1" style="background-color:#ffffff;" onload="init()">
+    <div class="container" style="text-align: center;">
+        <h1 style="background-color: #dac292; border: 1px solid rgb(250, 208, 208); color: white;"><b>BMI RECORDS</b>
+            <a type="button" class=" btn btn-danger btn-clearRecords" id="clearRecords" onclick="clearAllRecords()"> Clear
+        Records <i class="fas fa-window-close"></i></a>
+        </h1>
+
+    </div>
+    <div class="container">
+        <table class="table table-hover" id="tabled" style="border: 1px solid rgb(201, 255, 252);">
+            <thead style="background-color: #e6e2d3;">
+                <tr>
+                    <th style="border: 1px solid black;">Name</th>
+                    <th style="border: 1px solid black;">Age</th>
+                    <th style="border: 1px solid black;">Gender</th>
+                    <th style="border: 1px solid black;">Weight</th>
+                    <th style="border: 1px solid black;">Height</th>
+                    <th style="border: 1px solid black;">FavFoods</th>
+                    <th style="border: 1px solid black;">BMI</th>
+                    <th style="border: 1px solid black;">EDIT</th>
+                    <th style="border: 1px solid black;">Delete</th>
+
+                </tr>
+            </thead>
+            <tbody id="tabBody" style="background-color: #d5f4e6; border: 2px dashed rgb(205, 240, 192);">
+
+            </tbody>
+        </table>
+    </div>
+    <style>
+        .btn-clearRecords {
+            float: right;
+            border: 1px solid black;
+            margin-top: 5px;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-right: 50px
+        }
+    </style>
+</body>
+
+</html>

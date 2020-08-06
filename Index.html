@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <script src="Test.js"></script>
+
+</head>
+</head>
+
+<body id="body2" class="pagedivision" onload="bmiInit()" style="width: 100%; height: 100%;">
+    <div class="main-div">
+        <div class="heading">
+            <div class="row">
+                <label id="modify"></label>
+                <div class="bmi-calculator">
+                    <strong style="font-size: 1.0cm;"><i class="fa fa-child"></i><span style="font-size: 0.8cm;"> BMI Calculator
+            </span> <i class="fa fa-child"></i></strong>
+                    <hr>
+                    <form class="form-shadow" id="myform">
+                        <div class="rq" id="nameError"></div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><strong>Name</strong></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Enter your name" id="name">
+
+                        </div>
+
+                        <div class="rq" id="ageError"></div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><strong>Age </strong></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Enter your age" id="age">
+                        </div>
+
+                        <div class="rq" id="genderError"></div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><strong>Gender</strong></span>
+                            </div>
+                            <div style="padding-top: 11px; ">
+                                <input type="radio" class="form-control" id="male" name="defaultExampleRadios" style=" height: 20px;width:50px;  " value="male">
+                            </div>
+                            <div style="padding-top: 5px; ">
+                                <span for="male" style="height: 20px;"><big><i class="fa fa-male" style="font-size: 17.5px;"></i>
+                    Male</big></span>
+                            </div>
+                            <div style=" padding-top: 11px;">
+                                <input type="radio" id="female" class="form-control" name="defaultExampleRadios" style=" height: 20px;width:50px" value="female">
+                            </div>
+                            <div style="padding-top:5px; ">
+                                <span for="female" style="height: 20px;width: 50px;  "><big> <i class="fa fa-female"
+                      style="font-size: 17.5px;"></i> Female</big></span>
+                            </div>
+                        </div>
+
+                        <div class="rq" id="weightError"></div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><strong>Weight </strong></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder=" Enter your Weight" id="Weight">
+                            <div class="input-group-append">
+                                <span class="input-group-text">kg</span>
+                            </div>
+                        </div>
+                        <div class="rq" id="heightError"></div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><strong>Height</strong></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder=" Enter your Height" id="Height">
+                            <div class="input-group-append">
+                                <span class="input-group-text">cm</span>
+                            </div>
+                        </div>
+                        <div class="rq" id="foodError"></div>
+                        <div>
+                            <span class="input-group-text ">
+                <strong>Favorite Cuisine <i class="icon-food "></i></strong>
+                <div style=" width: 70px;">
+                  <input style="text-align: center;" type="checkbox" id="indian" name="1" value="indian">
+                  <label for="indian" style="padding-top: 7px;"> Indian</label>
+                </div>
+                <div style=" width: 80px;">
+                  <input type="checkbox" id="chinese" name="1" value="chinese">
+                  <label for="chinese" style="padding-top: 7px;"> Chinese </label>
+                </div>
+                <div style="width: 70px;">
+                  <input type="checkbox" id="arabian" name="1" value="arabian">
+                  <label for="arabian" style="padding-top: 7px;"> Arabian</label><br>
+                </div>
+              </span>
+                        </div>
+
+                    </form>
+                    <br>
+                    <div class="d-flex justify-content-between">
+                        <div id="cal-button">
+                            <button type="" id="cal" class="btn btn-primary" onclick="click1(this)" name="tocalculate" style="color: black;">Calculate<i class="fa fa-check-square-o"></i></button>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-secondary" onclick="clear1()" style="margin-left: -50px; color: black;">clear <i class="fa fa-eraser"
+                  style="color: black;"></i></button>
+                        </div>
+                        <div>
+                            <button type="button" class="btn-sm btn-info" onclick="window.location.href='Test.html'">New
+                Record <i class="fa fa-user-plus" style="font-size: 15px; color: black;"></i></button>
+
+                        </div>
+                    </div>
+                    <hr>
+                    <div style="width: 200px;">
+                        <label class="input-group-text">
+              <h6 style="padding-top:10px;">Total BMI:
+                <span style="color: red;" id="bmi-result">
+              </h6>
+              </span>
+            </label>
+                        <br>
+                    </div>
+                    <a style="float:right; margin-top:-75px ; height: 50px;" type="button" class=" btn btn-warning" href="BmiRecords.html">
+                        <div style="padding-top: 5px;">View Records <i class="fa fa-users"></div></i>
+                    </a>
+                    <!-- <button id="sample-button" onclick="sample()">sample</button> -->
+
+                    </div>
+                </div>
+            </div>
+            <style>
+                .main-div {
+                    display: inline-block;
+                    margin: 0 auto;
+                    /* padding: 20px; */
+                }
+                
+                .pagedivision {
+                    padding-top: 50px;
+                    text-align: center;
+                    background-image: url("bmi3.jpg");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    /* width: 100%;
+        height: 100%; */
+                }
+                
+                .heading {
+                    box-shadow: darkblue;
+                    text-align: center;
+                    padding-top: 0px;
+                    color: black;
+                    width: 100%;
+                    height: 100%;
+                    /* font-size: 1.2cm; */
+                }
+                
+                .bmi-calculator {
+                    border: 2px solid black;
+                    border-radius: 25px;
+                    background-color: rgba(112, 224, 224, 0.774);
+                    padding: 20px;
+                }
+                
+                .form-shadow :focus {
+                    box-shadow: none;
+                    outline: none;
+                    border: 1px solid #999999;
+                }
+                
+                hr {
+                    height: 10px;
+                    border-top: 2px solid #999999;
+                    margin: 6px;
+                }
+                
+                .input-group-text {
+                    color: green;
+                }
+                
+                .rq {
+                    color: red;
+                    text-align: left;
+                    font-size: 10px;
+                }
+            </style>
+</body>
+
+</html>
